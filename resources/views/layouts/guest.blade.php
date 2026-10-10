@@ -15,7 +15,6 @@
   <nav class="bg-white shadow-md py-4 px-6 flex justify-between items-center">
     <div class="flex items-center space-x-3">
       <img src="{{ asset('images/logo.png') }}" alt="Logo Kasbon" class="h-8">
-      <span class="text-xl font-bold text-orange-500">Kasbon</span>
     </div>
     <div class="space-x-4">
       <a href="/" class="text-gray-600 hover:text-orange-500 font-medium">Home</a>
