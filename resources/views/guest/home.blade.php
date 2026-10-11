@@ -10,7 +10,7 @@
     <!-- Card Produk Sample 1 -->
     <div class="bg-white rounded-lg shadow p-4 border border-gray-100">
         <div class="h-40 bg-gray-200 rounded-md flex items-center justify-center text-gray-400">
-            Gambar Produk
+<img src="{{ asset('images/piring.jpg') }}" alt="Piring Keramik" class="w-full h-40 object-cover rounded-lg">
         </div>
         <h3 class="font-bold text-lg mt-3">Piring Keramik</h3>
         <p class="text-orange-500 font-semibold mt-1">Rp 25.000</p>
@@ -19,7 +19,7 @@
     <!-- Card Produk Sample 2 -->
     <div class="bg-white rounded-lg shadow p-4 border border-gray-100">
         <div class="h-40 bg-gray-200 rounded-md flex items-center justify-center text-gray-400">
-            Gambar Produk
+<img src="{{ asset('images/gelas.jpg') }}" alt="Gelas Kaca Set" class="w-full h-40 object-cover rounded-lg">
         </div>
         <h3 class="font-bold text-lg mt-3">Gelas Kaca Set</h3>
         <p class="text-orange-500 font-semibold mt-1">Rp 45.000</p>
