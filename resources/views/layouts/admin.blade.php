@@ -262,8 +262,9 @@
   <li class="menu-header">Utama</li>
   <li class="active"><a class="nav-link" href="{{ url('/admin') }}"><i class="fas fa-fire"></i> <span>Dashboard</span></a></li>
   <li class="menu-header">Data</li>
-  <li><a class="nav-link" href="#"><i class="fas fa-box"></i> <span>Barang</span></a></li>
-  <li><a class="nav-link" href="#"><i class="fas fa-users"></i> <span>Pelanggan</span></a></li>
+  <li class="{{ request()->is('admin/barang*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('barang.index') }}"><i class="fas fa-box"></i> <span>Barang</span></a></li> 
+  <li><a class="nav-link" href="{{ route('pelanggan.index') }}"><i class="fas fa-users"></i> <span>Pelanggan</span></a></li>
+<li><a class="nav-link" href="{{ route('supplier.index') }}"><i class="fas fa-truck"></i> <span>Supplier</span></a></li>
   <li class="menu-header">Transaksi</li>
   <li><a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> <span>Penjualan</span></a></li>
   <li><a class="nav-link" href="#"><i class="fas fa-hand-holding-usd"></i> <span>Utang dan Cicilan</span></a></li>
