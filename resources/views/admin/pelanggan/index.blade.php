@@ -4,22 +4,7 @@
 <section class="section">
   <div class="section-header"><h1>Data Pelanggan</h1></div>
 
-  @if (session('success'))
-    <div class="alert alert-success alert-dismissible show fade">
-      <div class="alert-body">
-        <button class="close" data-dismiss="alert"><span>&times;</span></button>
-        {{ session('success') }}
-      </div>
-    </div>
-  @endif
-  @if (session('error'))
-    <div class="alert alert-danger alert-dismissible show fade">
-      <div class="alert-body">
-        <button class="close" data-dismiss="alert"><span>&times;</span></button>
-        {{ session('error') }}
-      </div>
-    </div>
-  @endif
+  @include('partials.alerts')
 
   <div class="card">
     <div class="card-header">
@@ -42,12 +27,7 @@
                 <td>{{ $p->no_hp }}</td>
                 <td>{{ $p->alamat }}</td>
                 <td>
-                  <a href="{{ route('pelanggan.edit', $p) }}" class="btn btn-warning btn-sm">Edit</a>
-                  <form action="{{ route('pelanggan.destroy', $p) }}" method="POST" class="d-inline"
-                        onsubmit="return confirm('Hapus pelanggan ini?')">
-                    @csrf @method('DELETE')
-                    <button class="btn btn-danger btn-sm">Hapus</button>
-                  </form>
+                   @include('partials.action-buttons', ['route' => 'pelanggan', 'model' => $p])
                 </td>
               </tr>
             @empty

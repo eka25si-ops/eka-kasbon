@@ -250,7 +250,7 @@
         <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
   <a href="{{ url('/admin') }}">
-    <img src="{{ asset('images/logo.png') }}" alt="Kasbon" style="height:40px"> 
+    <img src="{{ asset('images/logo.png') }}" alt="Kasbon" style="height:40px">
   </a>
 </div>
 <div class="sidebar-brand sidebar-brand-sm">
@@ -258,11 +258,10 @@
     <img src="{{ asset('images/logo.png') }}" alt="Kasbon" style="height:30px">
   </a>
 </div>
-         <ul class="sidebar-menu">
-  <li class="menu-header">Utama</li>
+@include('partials.sidebar')  <li class="menu-header">Utama</li>
   <li class="active"><a class="nav-link" href="{{ url('/admin') }}"><i class="fas fa-fire"></i> <span>Dashboard</span></a></li>
   <li class="menu-header">Data</li>
-  <li class="{{ request()->is('admin/barang*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('barang.index') }}"><i class="fas fa-box"></i> <span>Barang</span></a></li> 
+  <li class="{{ request()->is('admin/barang*') ? 'active' : '' }}"><a class="nav-link" href="{{ route('barang.index') }}"><i class="fas fa-box"></i> <span>Barang</span></a></li>
   <li><a class="nav-link" href="{{ route('pelanggan.index') }}"><i class="fas fa-users"></i> <span>Pelanggan</span></a></li>
 <li><a class="nav-link" href="{{ route('supplier.index') }}"><i class="fas fa-truck"></i> <span>Supplier</span></a></li>
   <li class="menu-header">Transaksi</li>
@@ -350,19 +349,19 @@
             <li class="dropdown">
               <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i> <span>Auth</span></a>
               <ul class="dropdown-menu">
-                <li><a href="auth-forgot-password.html">Forgot Password</a></li> 
-                <li><a href="auth-login.html">Login</a></li> 
-                <li><a href="auth-register.html">Register</a></li> 
-                <li><a href="auth-reset-password.html">Reset Password</a></li> 
+                <li><a href="auth-forgot-password.html">Forgot Password</a></li>
+                <li><a href="auth-login.html">Login</a></li>
+                <li><a href="auth-register.html">Register</a></li>
+                <li><a href="auth-reset-password.html">Reset Password</a></li>
               </ul>
             </li>
             <li class="dropdown">
               <a href="#" class="nav-link has-dropdown"><i class="fas fa-exclamation"></i> <span>Errors</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="errors-503.html">503</a></li> 
-                <li><a class="nav-link" href="errors-403.html">403</a></li> 
-                <li><a class="nav-link" href="errors-404.html">404</a></li> 
-                <li><a class="nav-link" href="errors-500.html">500</a></li> 
+                <li><a class="nav-link" href="errors-503.html">503</a></li>
+                <li><a class="nav-link" href="errors-403.html">403</a></li>
+                <li><a class="nav-link" href="errors-404.html">404</a></li>
+                <li><a class="nav-link" href="errors-500.html">500</a></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -400,10 +399,10 @@
       </div>
       <footer class="main-footer">
         <div class="footer-left">
-          Copyright &copy; 2026 Kasbon <div class="bullet"></div> 
+          Copyright &copy; 2026 Kasbon <div class="bullet"></div>
         </div>
         <div class="footer-right">
-          
+
         </div>
       </footer>
     </div>
@@ -417,11 +416,11 @@
   <script src="{{ asset('theme-admin/assets/modules/nicescroll/jquery.nicescroll.min.js') }}"></script>
   <script src="{{ asset('theme-admin/assets/modules/moment.min.js') }}"></script>
   <script src="{{ asset('theme-admin/assets/js/stisla.js') }}"></script>
-  
+
   <!-- JS Libraies -->
 
   <!-- Page Specific JS File -->
-  
+
   <!-- Template JS File -->
   <script src="{{ asset('theme-admin/assets/js/scripts.js') }}"></script>
   <script src="{{ asset('theme-admin/assets/js/custom.js') }}"></script>
