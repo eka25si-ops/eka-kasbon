@@ -5,9 +5,16 @@ use App\Http\Controllers\BarangController;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuthController;
 
-Route::view('/', 'guest.home');
+// Guest
+Route::view('/', 'guest.home')->name('home');
+Route::get('/auth', [AuthController::class, 'showLogin'])->name('login');
+Route::post('/auth', [AuthController::class, 'login'])->name('login.process');
+Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
+Route::post('/register', [AuthController::class, 'register'])->name('register.process');
 
+// Admin
 Route::prefix('admin')->group(function () {
     Route::view('/', 'admin.dashboard')->name('dashboard');
     Route::resource('barang', BarangController::class)->except('show');
